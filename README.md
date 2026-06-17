@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+# 🛡️ SIH25002 — Smart Tourist Safety Monitoring & Incident Response System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+![SIH25002](https://img.shields.io/badge/SIH-25002-blue?style=for-the-badge)
+![Theme](https://img.shields.io/badge/Theme-Travel%20%26%20Tourism-green?style=for-the-badge)
+![Category](https://img.shields.io/badge/Category-Software-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge)
 
-In the project directory, you can run:
+**Smart India Hackathon 2025 | Ministry of Development of North Eastern Region**
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📌 Problem Statement
 
-### `npm test`
+Tourists travelling across India face serious safety risks — accidents, crimes, medical emergencies, and identity fraud — especially in remote and high-traffic areas. Existing systems lack:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ❌ Real-time tourist monitoring
+- ❌ Secure digital identity verification
+- ❌ Fast incident response system
+- ❌ Geo-fencing based safety alerts
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💡 Proposed Solution
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+An **AI-powered platform** that ensures tourist safety through real-time tracking, smart alerts, and secure digital identity.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🔧 Key Modules
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| # | Module | Technology |
+|---|--------|-----------|
+| M1 | 🤖 AI Incident Detection | Python, Scikit-learn, TensorFlow |
+| M2 | 📍 Geo-Fencing Alerts | Leaflet.js, OpenStreetMap |
+| M3 | 🪪 Blockchain Digital ID | Ethereum, Smart Contracts |
+| M4 | 🚨 SOS Alert System | Node.js, Socket.IO |
+| M5 | 📊 Authority Dashboard | React.js, Charts |
+| M6 | 🌐 Multilingual Support | i18n, React |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠️ Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Layer | Technologies |
+|-------|-------------|
+| **Frontend** | React.js, React Router, Leaflet Maps, Tailwind CSS |
+| **Backend** | Node.js, Express.js, REST APIs, Socket.IO |
+| **AI / ML** | Python, Scikit-learn, TensorFlow |
+| **Blockchain** | Ethereum / Hyperledger, Smart Contracts |
+| **Database** | MongoDB, MySQL, Redis |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📁 Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+SIH25002-Smart-Tourist-Safety-System/
+├── frontend/          # React.js application
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── components/
+│   └── package.json
+├── backend/           # Node.js + Express (coming soon)
+├── ml-model/          # Python ML model (coming soon)
+└── README.md
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🚀 Frontend Setup
 
-### Analyzing the Bundle Size
+### Prerequisites
+- Node.js v18+
+- npm v9+
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installation
 
-### Making a Progressive Web App
+```bash
+# Clone the repository
+git clone https://github.com/Divakar1607/SIH25002-Smart-Tourist-Safety-System.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Go to frontend folder
+cd SIH25002-Smart-Tourist-Safety-System
 
-### Advanced Configuration
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Install required packages
+npm install react-router-dom leaflet react-leaflet axios
 
-### Deployment
+# Start development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Running App
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📊 Database Schema
+
+6 Tables:
+- `TOURIST` — Tourist registration details
+- `GEO_ZONE` — Geo-fencing zone boundaries
+- `INCIDENT` — Reported incident records
+- `AUTHORITY` — Police and responder profiles
+- `SOS_ALERT` — Emergency SOS alert records
+- `DIGITAL_ID` — Blockchain-based digital identity
+
+---
+
+## 🎯 Project Objectives
+
+1. ✅ Real-time tourist safety monitoring
+2. ✅ Instant SOS alert system (< 30 seconds response)
+3. ✅ Blockchain-based tamper-proof digital ID
+4. ✅ AI-based incident detection and prediction
+5. ✅ Live authority dashboard with heatmaps
+6. ✅ Multilingual support — Tamil, Hindi, English
+
+---
+
+## 📅 Progress Tracker
+
+| Date | Activity | Status |
+|------|----------|--------|
+| Jun 01 | Project Title Finalization | ✅ Done |
+| Jun 02 | Requirement Gathering | ✅ Done |
+| Jun 03 | Objective Definition | ✅ Done |
+| Jun 04 | Module Identification | ✅ Done |
+| Jun 05 | Use Case Diagram | ✅ Done |
+| Jun 06 | Database Table List | ✅ Done |
+| Jun 07 | ER Diagram | ✅ Done |
+| Jun 08 | SQL Schema | ✅ Done |
+| Jun 09 | UI Wireframes | ✅ Done |
+| Jun 10 | Frontend Environment Setup | ✅ Done |
+
+---
+
+## 🌐 Impact
+
+- 🇮🇳 **100M+** tourists travel India annually
+- ⚡ **< 30s** target SOS response time
+- 🔐 **Zero fraud** with blockchain digital ID
+- 📍 Scalable to all major tourist destinations
+
+---
+
+## 👨‍💻 Developer
+
+**Divakar R**
+- 🎓 B.Tech AI & Data Science (2024–2028)
+- 🏫 VSB Engineering College, Karur, Tamil Nadu
+- 🔗 [GitHub](https://github.com/Divakar1607)
+
+---
+
+## 📄 License
+
+This project is developed for **Smart India Hackathon 2025**.
+
+---
+
+<div align="center">
+Made with ❤️ for Smart India Hackathon 2025
+</div>
