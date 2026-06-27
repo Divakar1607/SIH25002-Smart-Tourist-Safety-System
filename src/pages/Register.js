@@ -5,7 +5,22 @@ function Register() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => setForm({...form,[e.target.name]:e.target.value});
-  const handleSubmit = () => { setLoading(true); setTimeout(()=>{setLoading(false);setSubmitted(true);},2000); };
+  const handleSubmit = async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/tourists`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+      const data = await response.json();
+      if (data.success) { setLoading(false); setSubmitted(true); }
+      else { setLoading(false); alert('Error: ' + data.error); }
+    } catch (err) {
+      setLoading(false);
+      alert('Backend connect aagala! Server running aa?');
+    }
+  };
   return (
     <div style={{background:'#0a1628',minHeight:'100vh',color:'white',fontFamily:'Segoe UI'}}>
       <nav style={{background:'#112240',padding:'15px 40px',borderBottom:'2px solid #00b4d8',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
